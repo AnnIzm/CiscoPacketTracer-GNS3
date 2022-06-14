@@ -1,0 +1,183 @@
+autostart = False
+version = 0.8.7
+[127.0.0.1:7200]
+    workingdir = C:\Users\E620~1\AppData\Local\Temp
+    udp = 10001
+    [[1750]]
+        image = D:\Projects\AKSiS\c1700-sy-mz.122-15.T17.image
+        idlepc = 0x80358a60
+        ghostios = True
+        chassis = 1750
+    [[ROUTER R4]]
+        model = 1750
+        console = 2104
+        aux = 2504
+        cnfg = configs\R4.cfg
+        f0 = R2 f0
+        x = -231.0
+        y = -104.0
+        z = 1.0
+    [[ROUTER R5]]
+        model = 1750
+        console = 2105
+        aux = 2505
+        cnfg = configs\R5.cfg
+        wic0/0 = WIC-1ENET
+        e0 = R6 e0
+        f0 = R1 f0
+        x = 50.0
+        y = 94.0
+        z = 1.0
+    [[ROUTER R6]]
+        model = 1750
+        console = 2106
+        aux = 2506
+        cnfg = configs\R6.cfg
+        wic0/0 = WIC-1ENET
+        wic0/1 = WIC-1ENET
+        e0 = R5 e0
+        e1 = R2 e1
+        f0 = R7 f0
+        x = -87.0
+        y = 127.0
+        z = 1.0
+    [[ROUTER R7]]
+        model = 1750
+        console = 2107
+        aux = 2507
+        cnfg = configs\R7.cfg
+        f0 = R6 f0
+        x = -181.0
+        y = 244.0
+        z = 1.0
+    [[ROUTER R1]]
+        model = 1750
+        console = 2101
+        aux = 2501
+        cnfg = configs\R1.cfg
+        wic0/0 = WIC-1ENET
+        wic0/1 = WIC-1ENET
+        e0 = R2 e0
+        e1 = R3 e1
+        f0 = R5 f0
+        x = 42.0
+        y = -31.0
+        z = 1.0
+    [[ROUTER R2]]
+        model = 1750
+        console = 2102
+        aux = 2502
+        cnfg = configs\R2.cfg
+        wic0/0 = WIC-1ENET
+        wic0/1 = WIC-1ENET
+        e0 = R1 e0
+        e1 = R6 e1
+        f0 = R4 f0
+        x = -102.0
+        y = -6.0
+        z = 1.0
+    [[ROUTER R3]]
+        model = 1750
+        console = 2109
+        aux = 2509
+        cnfg = configs\R3.cfg
+        wic0/0 = WIC-1ENET
+        wic0/1 = WIC-1ENET
+        e1 = R1 e1
+        f0 = R8 f0
+        x = 150.0
+        y = -125.0
+        z = 1.0
+    [[ROUTER R8]]
+        model = 1750
+        console = 2108
+        aux = 2508
+        cnfg = configs\R8.cfg
+        f0 = R3 f0
+        x = 257.0
+        y = -216.0
+        z = 1.0
+[GNS3-DATA]
+    configs = configs
+    m11 = 1.0
+    m22 = 1.0
+    [[NOTE 1]]
+        text = "e1"
+        x = 2.82781122275
+        y = 48.2609791209
+        interface = R3 e1
+    [[NOTE 2]]
+        text = "f0"
+        x = 63.4705452981
+        y = -3.91420207598
+        interface = R3 f0
+    [[NOTE 3]]
+        text = "f0"
+        x = 2.52945470187
+        y = 47.914202076
+        interface = R8 f0
+    [[NOTE 4]]
+        text = "f0"
+        x = 58.0527523349
+        y = -9.18268109775
+        interface = R7 f0
+    [[NOTE 5]]
+        text = "e0"
+        x = 71.8877490333
+        y = 12.6328779701
+        interface = R6 e0
+    [[NOTE 6]]
+        text = "e1"
+        x = 28.5171421737
+        y = -17.7480060595
+        interface = R6 e1
+    [[NOTE 7]]
+        text = "f0"
+        x = 7.94724766506
+        y = 53.1826810977
+        interface = R6 f0
+    [[NOTE 8]]
+        text = "e0"
+        x = -5.8877490333
+        y = 31.3671220299
+        interface = R5 e0
+    [[NOTE 9]]
+        text = "f0"
+        x = 30.4452268287
+        y = -17.9183308023
+        interface = R5 f0
+    [[NOTE 10]]
+        text = "f0"
+        x = 64.8512450285
+        y = 46.1970698666
+        interface = R4 f0
+    [[NOTE 11]]
+        text = "e0"
+        x = 72.4104771892
+        y = 15.1579032658
+        interface = R2 e0
+    [[NOTE 12]]
+        text = "e1"
+        x = 37.4828578263
+        y = 61.7480060595
+        interface = R2 e1
+    [[NOTE 13]]
+        text = "f0"
+        x = 1.14875497145
+        y = -2.19706986665
+        interface = R2 f0
+    [[NOTE 14]]
+        text = "e1"
+        x = 63.1721887772
+        y = -4.26097912094
+        interface = R1 e1
+    [[NOTE 15]]
+        text = "e0"
+        x = -6.41047718919
+        y = 28.8420967342
+        interface = R1 e0
+    [[NOTE 16]]
+        text = "f0"
+        x = 35.5547731713
+        y = 61.9183308023
+        interface = R1 f0

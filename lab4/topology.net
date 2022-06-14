@@ -1,0 +1,274 @@
+autostart = False
+version = 0.8.7
+[127.0.0.1:7200]
+    workingdir = C:\Users\E620~1\AppData\Local\Temp
+    udp = 10001
+    [[1750]]
+        image = D:\Projects\AKSiS\c1700-sy-mz.122-15.T17.image
+        idlepc = 0x80358a60
+        ghostios = True
+        chassis = 1750
+    [[ROUTER R4]]
+        model = 1750
+        console = 2104
+        aux = 2504
+        cnfg = configs\R4.cfg
+        f0 = R2 f0
+        x = -551.0
+        y = -195.0
+        z = 1.0
+    [[ROUTER R5]]
+        model = 1750
+        console = 2105
+        aux = 2505
+        cnfg = configs\R5.cfg
+        wic0/0 = WIC-1ENET
+        e0 = R6 e0
+        f0 = R1 f0
+        x = 61.0
+        y = 152.0
+        z = 1.0
+        hx = -6.5
+        hy = -24.0
+    [[ROUTER R6]]
+        model = 1750
+        console = 2106
+        aux = 2506
+        cnfg = configs\R6.cfg
+        wic0/0 = WIC-1ENET
+        wic0/1 = WIC-1ENET
+        e0 = R5 e0
+        e1 = R2 e1
+        f0 = R7 f0
+        x = -248.0
+        y = 219.0
+        z = 1.0
+        hx = 38.5
+        hy = -26.0
+    [[ROUTER R7]]
+        model = 1750
+        console = 2107
+        aux = 2507
+        cnfg = configs\R7.cfg
+        f0 = R6 f0
+        x = -486.0
+        y = 420.0
+        z = 1.0
+    [[ROUTER R1]]
+        model = 1750
+        console = 2101
+        aux = 2501
+        cnfg = configs\R1.cfg
+        wic0/0 = WIC-1ENET
+        wic0/1 = WIC-1ENET
+        e0 = R2 e0
+        e1 = R3 e0
+        f0 = R5 f0
+        x = 83.0
+        y = -127.0
+        z = 1.0
+    [[ROUTER R2]]
+        model = 1750
+        console = 2102
+        aux = 2502
+        cnfg = configs\R2.cfg
+        wic0/0 = WIC-1ENET
+        wic0/1 = WIC-1ENET
+        e0 = R1 e0
+        e1 = R6 e1
+        f0 = R4 f0
+        x = -243.0
+        y = -75.0
+        z = 1.0
+    [[ROUTER R3]]
+        model = 1750
+        console = 2103
+        aux = 2503
+        cnfg = configs\R3.cfg
+        wic0/0 = WIC-1ENET
+        e0 = R1 e1
+        f0 = R8 f0
+        x = 336.0
+        y = -260.0
+        z = 1.0
+    [[ROUTER R8]]
+        model = 1750
+        console = 2108
+        aux = 2508
+        cnfg = configs\R8.cfg
+        f0 = R3 f0
+        x = 557.0
+        y = -374.0
+        z = 1.0
+[GNS3-DATA]
+    configs = configs
+    m11 = 1.0
+    m22 = 1.0
+    [[NOTE 1]]
+        text = "                     89.192.0.2/12\nTunnel: 2002:59C0:2::2/64"
+        x = -105.0
+        y = -141.5
+        font = "MS Shell Dlg 2,8,-1,5,75,0,0,0,0,0"
+    [[NOTE 2]]
+        text = "89.192.0.1/12\nTunnel: 2002:59C0:1::1/64"
+        x = -179.0
+        y = -45.5
+        font = "MS Shell Dlg 2,8,-1,5,75,0,0,0,0,0"
+    [[NOTE 3]]
+        text = "FD2E:3E45:E7A1:3:D203:37FF:FE50:0"
+        x = -483.0
+        y = -185.5
+        font = "MS Shell Dlg 2,8,-1,5,75,0,0,0,0,0"
+    [[NOTE 4]]
+        text = "FD2E:3E45:E7A1:3:D201:37FF:FE50:0"
+        x = -486.0
+        y = -61.5
+        font = "MS Shell Dlg 2,8,-1,5,75,0,0,0,0,0"
+    [[NOTE 5]]
+        text = "Подсеть организации: FD2E:3E45:E7A1::/60\nВыбранный блок адресов: 2A00:1760::/30"
+        x = -149.414213562
+        y = -407.328427125
+    [[NOTE 6]]
+        text = "FD2E:3E45:E7A1:7:D206:37FF:FE50:0\nLoopback: 2A00:1760:0:2::1/64"
+        x = -418.0
+        y = 433.5
+        font = "MS Shell Dlg 2,8,-1,5,75,0,0,0,0,0"
+    [[NOTE 7]]
+        text = "FD2E:3E45:E7A1:6:D205:37FF:FE50:2000"
+        x = -486.0
+        y = 167.5
+        font = "MS Shell Dlg 2,8,-1,5,75,0,0,0,0,0"
+    [[NOTE 8]]
+        text = "Link-local: FE80::2\nFD2E:3E45:E7A1:5::2"
+        x = -184.0
+        y = 252.5
+        font = "MS Shell Dlg 2,8,-1,5,75,0,0,0,0,0"
+    [[NOTE 9]]
+        text = "FD2E:3E45:E7A1:7:D205:37FF:FE50:0"
+        x = -496.0
+        y = 254.5
+        font = "MS Shell Dlg 2,8,-1,5,75,0,0,0,0,0"
+    [[NOTE 10]]
+        text = "FD2E:3E45:E7A1:6:D201:37FF:FE50:2000"
+        x = -481.0
+        y = -2.5
+        font = "MS Shell Dlg 2,8,-1,5,75,0,0,0,0,0"
+    [[NOTE 11]]
+        text = "Link-local: FE80::1\nFD2E:3E45:E7A1:5::1"
+        x = 39.0
+        y = 206.5
+        font = "MS Shell Dlg 2,8,-1,5,75,0,0,0,0,0"
+    [[NOTE 12]]
+        text = "FD2E:3E45:E7A1:4:D204:37FF:FE50:0"
+        x = 103.0
+        y = 108.5
+        font = "MS Shell Dlg 2,8,-1,5,75,0,0,0,0,0"
+    [[NOTE 13]]
+        text = "FD2E:3E45:E7A1:4:D200:37FF:FE50:0"
+        x = 117.0
+        y = -61.5
+        font = "MS Shell Dlg 2,8,-1,5,75,0,0,0,0,0"
+    [[NOTE 14]]
+        text = "FD2E:3E45:E7A1:2:D200:37FF:FE50:2000"
+        x = 151.0
+        y = -107.5
+        font = "MS Shell Dlg 2,8,-1,5,75,0,0,0,0,0"
+    [[NOTE 15]]
+        text = "FD2E:3E45:E7A1:2:D202:37FF:FE50:1000"
+        x = 333.0
+        y = -193.5
+        font = "MS Shell Dlg 2,8,-1,5,75,0,0,0,0,0"
+    [[NOTE 16]]
+        text = "FD2E:3E45:E7A1:1:D202:37FF:FE50:0"
+        x = 402.0
+        y = -234.5
+        font = "MS Shell Dlg 2,8,-1,5,75,0,0,0,0,0"
+    [[NOTE 17]]
+        text = "FD2E:3E45:E7A1:1:D207:37FF:FE50:0\nLoopback: 2A00:1760:0:1::1/64"
+        x = 557.0
+        y = -313.5
+        font = "MS Shell Dlg 2,8,-1,5,75,0,0,0,0,0"
+    [[NOTE 18]]
+        text = "IPv4_Link"
+        x = -88.0
+        y = -75.5
+    [[NOTE 19]]
+        text = "f0"
+        x = -2.51977637109
+        y = 40.3941699065
+        interface = R8 f0
+    [[NOTE 20]]
+        text = "f0"
+        x = 62.9391270919
+        y = -4.52637685348
+        interface = R7 f0
+    [[NOTE 21]]
+        text = "e0"
+        x = 69.1792180798
+        y = 12.9384324939
+        interface = R6 e0
+    [[NOTE 22]]
+        text = "e1"
+        x = -3.18099362224
+        y = -38.9995905143
+        interface = R6 e1
+    [[NOTE 23]]
+        text = "f0"
+        x = 3.06087290806
+        y = 44.5263768535
+        interface = R6 f0
+    [[NOTE 24]]
+        text = "e0"
+        x = -22.1792180798
+        y = 33.0615675061
+        interface = R5 e0
+    [[NOTE 25]]
+        text = "f0"
+        x = 39.9130040853
+        y = -27.9895789368
+        interface = R5 f0
+    [[NOTE 26]]
+        text = "f0"
+        x = 57.7308511933
+        y = 40.8380734503
+        interface = R4 f0
+    [[NOTE 27]]
+        text = "f0"
+        x = 68.5197763711
+        y = 3.60583009354
+        interface = R3 f0
+    [[NOTE 28]]
+        text = "e0"
+        x = -2.14806239641
+        y = 41.0948608211
+        interface = R3 e0
+    [[NOTE 29]]
+        text = "e0"
+        x = 67.2768786698
+        y = 12.4285535094
+        interface = R2 e0
+    [[NOTE 30]]
+        text = "f0"
+        x = -14.7308511933
+        y = -29.8380734503
+        interface = R2 f0
+    [[NOTE 31]]
+        text = "e1"
+        x = -5.81900637776
+        y = 49.9995905143
+        interface = R2 e1
+    [[NOTE 32]]
+        text = "e1"
+        x = 68.1480623964
+        y = -0.0948608211258
+        interface = R1 e1
+    [[NOTE 33]]
+        text = "f0"
+        x = 37.0869959147
+        y = 44.9895789368
+        interface = R1 f0
+    [[NOTE 34]]
+        text = "e0"
+        x = -27.2768786698
+        y = 29.5714464906
+        interface = R1 e0
